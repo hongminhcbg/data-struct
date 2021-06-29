@@ -3,6 +3,7 @@ package main
 import (
 	"data-struct/alv"
 	"data-struct/bst"
+	"data-struct/heap"
 	"fmt"
 )
 
@@ -60,6 +61,36 @@ func demoAVL() {
 
 	node.Print()
 }
+
+func demoHeap() {
+	arr := []int{0,1,4,3,7,8,9,10}
+	heap.Init(arr, len(arr))
+	fmt.Println("Heap init success")
+	heap.Print()
+
+	fmt.Println("Pop 3 elements")
+	fmt.Println(heap.Pop())
+	fmt.Println(heap.Pop())
+	fmt.Println(heap.Pop())
+
+	fmt.Println("Heap after pop")
+	heap.Print()
+
+	fmt.Println("Replace 4 -> 15")
+	heap.SetVal(2, 15)
+
+	fmt.Println("Heap after replace")
+	heap.Print()
+
+	fmt.Println("Push 3 elements 8 90 2 to heap")
+	heap.Push(8)
+	heap.Push(90)
+	heap.Push(2)
+
+	fmt.Println("Heap after push")
+	heap.Print()
+}
+
 func main() {
-	demoAVL()
+	demoHeap()
 }
