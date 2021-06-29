@@ -1,13 +1,13 @@
 package main
 
 import (
-	"fmt"
-
+	"data-struct/alv"
 	"data-struct/bst"
+	"fmt"
 )
 
-func main() {
-	fmt.Println("Hello world")
+func demoBst() {
+	fmt.Println("DEMO BST")
 	root := bst.NewNode(50)
 
 	bst := &root
@@ -41,4 +41,25 @@ func main() {
 
 	bst.Delete(50)
 	bst.Print()
+
+}
+
+func demoAVL() {
+	node := alv.NewNode(50)
+	node.Insert(25)
+	node.Insert(10)
+	//node.Insert(75)
+	//node.Insert(85)
+	//node.Insert(12)
+	//node.Insert(19)
+	//node.Insert(6)
+	//node.Insert(3)
+	//node.Insert(64)
+	//node.Insert(86)
+	//node.Insert(15)
+
+	node.Print()
+}
+func main() {
+	demoAVL()
 }
