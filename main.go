@@ -2,6 +2,7 @@ package main
 
 import (
 	"data-struct/alv"
+	"data-struct/bfs"
 	"data-struct/bst"
 	"data-struct/heap"
 	"fmt"
@@ -92,5 +93,5 @@ func demoHeap() {
 }
 
 func main() {
-	demoHeap()
+	bfs.BFS(1, 10)
 }
