@@ -1,0 +1,27 @@
+OOP:
+  Encapsulation:
+    - class keep its state private, in inside class
+    - Another class have to call public func to access the class
+  Abstraction:
+    - If one class expose all method, this will so difficult maintain code
+    - My class shold hide implementation detail
+    - Another class know what we do but no need to know how we do
+    eg: like home button on the phone, we know what happen when we press the button but we don't know how
+  Inheritane:
+    - Avoid duplicate code
+    - child class can use mothod of parent class
+    eg:
+      - class employee has mothod getSalary()
+      - class dev is child of class employee
+  Pholimorphism:
+    - Many shapes
+    - different structs can implement same interface
+    eg:
+      - circle and triangle can implement method square()
+
+SOLID:
+  Single_Responsibility:
+    - class shoud do one thing and have only one reason to change
+  Open_Close:
+    - class open to extendsion and closed to modification
+    - If you mofify 
