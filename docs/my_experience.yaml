@@ -1,0 +1,25 @@
+game_luckywheel:
+  bhrr: 
+    - limit transactions, late user will have no turn
+  dlrw:
+    - mobile cache api get config
+    - pubsub retention 7 days, push noti all, wrong gift 1k->100k, 50k->5M
+    - user cheat topup card wrong phone
+    - concurrent transactions, user call to complaint turn -> use redis lock
+    - write job to crawl data from big query
+    - update num_gift by count(*) -> run concurrent error duplicate unique key -> redis lock because maybe 2-3 giftss 
+onboarding:
+  - ekyc
+  - portal approve ekyc instead of SF
+  - db migration
+  - copy data from bigquery, use md5 to check sum after migrate
+  - status response to web is number like (-1, 1, 2), too hard to debug -> response text
+  - a lot of data and step, can't force update user so have maintain both api v1 and api v2
+loan_data:
+  - pipeline, get 
+investments:
+  - 
+smart_opt:
+  - crud secret 
+  - api get opt for web trading
+  - rate limit 
