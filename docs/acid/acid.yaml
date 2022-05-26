@@ -1,0 +1,28 @@
+ACID:
+  automicity: 
+    - ˌætəˈmɪsəti
+    - read, write, update and detele is single unit
+    - entire stament is executed or none
+    - prevents data loss
+    - if any of the statements is fail, all transactions fail and left database unchange
+  Consistency:
+    - kənˈsɪstənsi
+    - ensures that transactions only make changes to tables in predefined and predictable ways
+    - bring database from a valid state to another
+  Isolation:
+    Sumary:
+      - When multiple transactions will execute in same table in the same time
+      - TODO 4 level isolation transaction
+    four_level_isolation:
+      DIRTY_READ:
+        - can see data written by uncommitted transaction
+      READ_COMMITTED:
+        - only see data is written by committed transaction
+        - same query might return diff result
+      REPEATEABLE_READ:
+        - same read query always returns same value
+        - data still correct
+      SERIALIZABLE:
+        - highest isolation but reduce concurrency
+  Durability:
+    - Once transaction is committed, they will remain committed even system failure (crash, power outage)
