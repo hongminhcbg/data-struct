@@ -23,3 +23,15 @@ smart_opt:
   - crud secret 
   - api get opt for web trading
   - rate limit 
+credit_card:
+  - get xml from partner, all account need to repayment
+  - run repayment job and export data do xml
+  - save to s3 
+  - push noti 
+noti:
+  - event base crud device token
+  - listen from core banking
+  - expose api internal, after that push to queue
+  - expose api tracking noti
+sms:
+  - send otp, round robin
