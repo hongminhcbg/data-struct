@@ -6,7 +6,7 @@ OOP:
     - If one class expose all method, this will so difficult maintain code
     - My class shold hide implementation detail
     - Another class know what we do but no need to know how we do
-    eg: like home button on the phone, we know what happen when we press the button but we don't know how
+    - eg: like home button on the phone, we know what happen when we press the button but we don't know how
   Inheritane:
     - Avoid duplicate code
     - child class can use mothod of parent class
@@ -18,10 +18,30 @@ OOP:
     - different structs can implement same interface
     eg:
       - circle and triangle can implement method square()
-
 SOLID:
   Single_Responsibility:
     - class shoud do one thing and have only one reason to change
   Open_Close:
     - class open to extendsion and closed to modification
     - If you mofify 
+  Liskov:
+    - B is subtype of BParent, B can replace by BParent and program will good
+    - Dog (B) have two methods Eat() and Breath() is subclass of animals (BParent)
+    - Dog can be replaced by animals
+  Interface Segregation:
+    - One interface large should split to small Interface
+  Dependency Inversion:
+    - High level module shouldn't depend on low level, it depend on interface and abstraction 
+    - Shouldn't : 
+        struct LaptopDell {
+          Monitor interface{}
+        }
+
+        func New() *LaptopDell {
+          m := NewDellMonitor()
+          return &LaptopDell{Monitor: m}
+        }
+    - that is better:
+       func New(m Monitor) *LaptopDell {
+          return &LaptopDell{Monitor: m}
+        }
