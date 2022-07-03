@@ -26,3 +26,5 @@ ACID:
         - highest isolation but reduce concurrency
   Durability:
     - Once transaction is committed, they will remain committed even system failure (crash, power outage)
+    
+  Slectivity: Is (select DISTINCT(x)) / COUNT(*), if selectivity is high, we will put the column first in the index
