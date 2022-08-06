@@ -1,0 +1,57 @@
+section_1:
+  summary:
+    Introduction to Digital transformation with GCP
+  details:
+    - Explain why cloud technology is revoltionizing business
+    - Explain why it is critical for business to adopt new technology | 
+section_2:
+  summary:
+    Innovating with Data and GC
+  details:
+    2_1:
+      describe the role of data in digital transformation and the importance of a data-driven culture |
+      Explain how clound technology enables data to be applied in new ways
+    2_2: 
+      Identify common GC solutions for data management |
+      Recognize examples of structed and unstructed data
+    2_3: 
+      Identify common GC solutions for smart analytics | 
+      Articulate the business benefits of storing data in the cloud | 
+      Apply appropriate business benefits of storing data in the cloud | 
+      Explain the benefits of GC data products, including Locker, BigQuery, Cloud Spanner, Cloud SQL, Cloud Storage
+    2_4: 
+      identify GC solutions for machine learning and AI | 
+      define artificial
+section_3: 
+  summary:
+    Infrastructure and application modernization
+  details: 
+    3_1: 
+      Learn what modernization IT infrastructure with GC mean | 
+      Explain why legacy infrastructure struggles to deliver modern services to customers | 
+      explain the benefits of modernizing with GC
+      Diffitrentiate between hybrid and multicloud infrastructure | 
+      Diffirent bwtween VM, containers and serverless computing within business use cases | 
+    3_2: 
+      Understand modernizing application with GC | 
+      Descibe the benefits of using cloud-native applications | 
+      Apply the appropriate change to diffirent business use cases | 
+      Explain the benefits of k8s engine, Anthos and App Engine for application development | 
+    3_3: 
+      Understand the value of API 
+section_4: 
+  summary: 
+    Understand GC security and operation
+  details: 
+    4_1: 
+      Describe financial govermance in the cloud and Cloud recommended best pactices for effective cloud cost management | 
+      Explain hot adopting cloud technology affects the total cost of ownerships (TCO) | 
+      Identify the cost management  strategy needed in a given business scenario 
+    4_2: 
+      xxx
+    4_3: 
+      Explain how IT operation need to adapt to thive in the cloud
+    4_4: 
+      Identify GC solutions for cloud resources monitoring and appication |
+      Monitoring, logging and observability | 
+      Identidy the GC resource monitoring and maintenance tools
