@@ -1,0 +1,35 @@
+benefits_of_cloud_computing:
+  cost_effective:
+  - pay for what you consume
+  - on-demand pricing
+  global:
+  - launch workloads anywhere in the world
+  security:
+  - cloud provider takes care of physical security
+  Reliable:
+  - Data backup, disaster recovery, data replication and fault tolerance
+  Sacleable:
+  - increase or decrese resource on demand 
+  Current:
+  - underlying hardware is managed my cloud provider, upgraded and replaced by GG, without interuption to u 
+common_GC_service:
+  Compute:
+  - Virsual machine
+  Storage:
+  - Like hard-drive that can store files
+  Networking:
+  - Virsual netword, can able to define internet connections or network isolations
+  Databases:
+  - xxx
+type_of_cloud_computing:
+  Software_as_a_service:
+  - Run and managed by service provider
+  - like saleforce
+  - for custormer
+  Platform_as_a_service:
+  - forcus on the deployment and your app
+  - for developers like heroku
+  Infrastruct_as_a_service:
+  - the basic block of IT
+  - like GCP, AWS, AZURe
+
