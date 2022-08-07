@@ -1,0 +1,42 @@
+cloud_deployment_model:
+  public_cloud:
+  - everything build on the cloud provider 
+  - like AWS, GCP
+  - customer id startups, SaaS, new projects
+  private_cloud:
+  - also know as on-premise
+  - like OpenStack, FPT 
+  - Goverment
+  hybrid:
+  - using both public and private
+  - public and private using VPN
+  - customer is Banks, FinTech, legacy on-premise
+TCO_total_cost_of_ownership:
+  on_premise:
+  - Software licese fees
+  GCP:
+  - subcription fees
+The_evolution_of_computing:
+  physical_server:
+  - waste space
+  - u have to guess your capacity
+  - can't vertical scale, manual migration
+  - control everything 
+  VMs:
+  - xxx
+  Containers:
+  - xxx
+  Functions:
+  - Know as serverless compute
+  - Cold starts is a side effect
+Global_infrastructure:
+  Regions:
+  - independent geophrapic areas
+  - GCP has 25 regions
+  Edge_networks:
+  - xxx
+  Zones:
+  - is a physical location made up of one or more datacenter
+  - a region general contains 3 zones
+  Resource_scoping:
+
