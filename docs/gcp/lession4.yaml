@@ -1,0 +1,17 @@
+kubernetes:
+  detail: is an open source container orchestration (or-chi-stra-tion) system for |
+    automating deplyment, scaling and management of containers | 
+    run containers distributed multiple VMs
+databases:
+  big_query:
+  - store tetabytes or petabytes using no-SQL wide column
+  - expensive
+  cloud_spanner:
+  - like MySQL, PostSQL, design by google and design for scale 
+  BigTable:
+  - NoSQL db for large analytic
+  - key-val store
+  Firestore:
+  - NoSQL document db 
+  - access to mobile or web apps
+  - store and sync data realtime

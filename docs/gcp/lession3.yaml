@@ -1,0 +1,15 @@
+google_cloud_tool:
+  gc_sdk:
+  - many programing language, like go, java, python, 
+  gc_cli:
+  - command line 
+  gc_shell:
+  - online command line
+  projects:
+  - cloud resources muse belong to a project
+  - a project can't access another project's resource unless u use VPC
+  - a project has project name, project_id and project number (google provide)
+  folders:
+  - allows u to logical group multiple projects
+  - that share common IAM permissions
+GKE:
