@@ -1,0 +1,24 @@
+k8s_shutdown_flow:
+  step_1:
+  - pod is set to the "terminating", remove endpoint and the pods not getting new traffic
+  - containers are still running
+  step_2:
+  - preStopHook is executed
+  - if app not handle gracefull shutdown, using preHook are another solutions
+  step_3: 
+  - SIGTERM is send to the pod 
+  - this signal lets the containers know the they are going to be shutdown soon 
+  - u should close db connection and socket stream
+  step_4: 
+  - k8s wait to gracefull shutdown, default is 30s and set the 'terminationGracePeriodSeconds' field to custom
+  step_5:
+  - k8s send the signal SIGKILL and remove pods
+crash_in_application:
+  panic_in_app:
+  - k8s will spin up another container 
+  - if pod crash again k8s will restart container again after wait amount of time
+  - the waiting period will be increase after crash
+  - the state of pod is CrashOfLoopBack
+  oom:
+  liveness_fail:
+  readiness_fail:
