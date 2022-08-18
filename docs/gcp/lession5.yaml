@@ -1,0 +1,24 @@
+serverless:
+  what:
+  - fully-managed services that automatically scale, high available, durable and secure by default 
+  - pay-for-value (don't pay for idle server)
+  - scale to zero
+services:
+  cloud_function:
+  - function as service 
+  - choose runtime, upload single function code
+  cloud_run:
+  - serverless container 
+  app_engine:
+  - paas
+  - like traditional web-frameworks, server rendering
+  eventarc:
+  - serverless event bus
+GCB:
+- serverless 
+- file call objects
+storage_class:
+- 0 per min, frequency use
+- day per min, once per day, cheaper 
+- 30 day per min, once per month, more cheaper
+- 90 day per min, very very old file
