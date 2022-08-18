@@ -1,0 +1,15 @@
+#https://www.alexedwards.net/blog/configuring-sqldb
+open_and_idle_connection:
+- object is a pool contains both idle and 'in-use' connections
+- a connections is marked as in-use when u are using it to execute data task, like query 
+- when task is completed the connection is marked as idle 
+- when u need a connectin, sql.DB will first check if any idle connections ara already available in the pool 
+- if have no, Go will create new additional connection
+
+setMaxOpenConns:
+- total in-use and idle connection
+- if set maxOpenConns is 5 and u have 5 connections are in-use, Go will force wait until one of the 5 connections is freed up
+
+setMaxIdleConns:
+- by default sql.DB max idle conns is 2
+
