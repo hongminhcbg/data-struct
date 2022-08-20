@@ -1,0 +1,18 @@
+summary:
+  - in system, sometimes u must lock a resource. This might be to make critical modifications that can't not be resolved in any conrrent way
+  - one and only one worker to be able to acquire the lock
+  - can be unlock ater a given time period
+savety_and_liveness_guarantees:
+  safety: mutual exclusion, one and only one client can hold the lock
+  liveness_1: deadlock free, always possible ao accquire a lock, even if the client that locked a resource crashes
+  liveness_2: fault tolerance, as long as the master node is up, client can accquire and release lock 
+corrent_impl_for_single_instance:
+  - query: SET ${{RESOURCE_NAME}} ${{RANDOM_VALUE}} NX PX 30000 (not existed and expired time is 30s)
+  - RANDOM_VALUE must be unique across all clients and all lock requests
+  - RANDOME_VALUE is very important, if key is expired (client A), another client get the same lock (client B), the client A can release lock of client B 
+  - if expired time too short, lock can be release before client call release
+the_red_lock_algorithm:
+- we assume we have N redis masters 
+- get lock from each instace sequentially
+- if >= (N/2 + 1) client accquired => get lock success
+- more details here (https://redis.io/docs/reference/patterns/distributed-locks/)
