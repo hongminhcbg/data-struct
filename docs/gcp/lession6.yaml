@@ -1,0 +1,7 @@
+type_of_migration:
+  lift_and_shift:
+  - move source to target with minor or no modifications or refactoring
+  improve_and_move:
+  - xxx
+  rip_and_replace:
+  - re-design and rewrite

@@ -1,0 +1,10 @@
+Node:
+  sumarry:
+    - k8s run your workload by placing containers into Pods to run on Nodes
+    - contain the sevices necessary to run Pods
+    - contain kebelet, container runtime, kube-proxy
+  node_contains:
+    kubelet:
+    - node self register to control plane
+    - for management
+

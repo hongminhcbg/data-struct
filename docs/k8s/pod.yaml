@@ -1,0 +1,5 @@
+pod:
+  sumarry: 
+    - normaly pod contain two containers, 1 sidecar, 1 real container
+  contain:
+
