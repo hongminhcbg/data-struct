@@ -1,0 +1,4 @@
+Node: a worker machine, a part of cluster
+Cluster: a set of Nodes, that run containerized applications managed my k8s.
+Service: a set of pods using label selectors.
+

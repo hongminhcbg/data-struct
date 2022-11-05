@@ -1,0 +1,8 @@
+Sidecar:
+  sidecar_pattern:
+  - this pattern name sidecar because it resembles a sidecar attached to a motorcycle 
+  why:
+  - logging, firewall rule, tracing, network logic, retry policy, load balancing, canary deployment should separate with business logic 
+  server_imple_proxy:
+  - envoy, istio proxy
+
