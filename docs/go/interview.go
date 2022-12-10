@@ -100,6 +100,9 @@ func main() {
 	// slice()
 	// slicev2()
 	//raceCondition()
+
+	//memLeak()
+	updateMapInsideLoop()
 }
 
 func xxx2() {
@@ -114,4 +117,18 @@ func xxx2() {
 	}
 	time.Sleep(time.Second)
 	fmt.Println(x)
+}
+
+func updateMapInsideLoop() {
+	m := map[int]int{
+		1: 1,
+		2: 2,
+		3: 3,
+	}
+
+	for k, v := range m {
+		m[2*k] = 2 * v
+	}
+
+	fmt.Println(m)
 }
