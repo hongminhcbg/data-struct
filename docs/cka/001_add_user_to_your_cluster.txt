@@ -1,0 +1,19 @@
+step for config a user for your clusters
+1. Gen certificates for the user
+  $ openssl genrsa -out mint.key 4096
+
+2. gen Certificate Sign Request (CSR)
+  $ openssl req -new -key mint.key -out mint.csr -subj "/CN=mint/O=cbg/EMAIL=cbg.hongminh@gmail.com"
+
+3. Gen CRT by ca.crt (in master node or in ~/.minikube/ca.crt)
+  $ sudo openssl x509 -req -in mint.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out ./mint.crt -days 365
+after that, we need keep mint.key and mint.crt in safe location
+
+4. set credentials and context for the cluster
+  $ mk config set-credentials mint --client-certificate=$PATH_TO_YOUR_CERT/mint.crt --client-key=$PATH_TO_YOUR_CERT/mint.key
+  $ mk config set-context mint-local --cluster=minikube --user=mint
+
+5. Create a role
+    example in role.yaml
+
+6. Bind a role to the user
