@@ -64,7 +64,7 @@ func demoAVL() {
 }
 
 func demoHeap() {
-	arr := []int{0,1,4,3,7,8,9,10}
+	arr := []int{0, 1, 4, 3, 7, 8, 9, 10}
 	heap.Init(arr, len(arr))
 	fmt.Println("Heap init success")
 	heap.Print()
