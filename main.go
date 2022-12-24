@@ -3,8 +3,8 @@ package main
 import (
 	"data-struct/alv"
 	"data-struct/bst"
-	"data-struct/dfs"
 	"data-struct/heap"
+	basicmap "data-struct/map"
 	"fmt"
 )
 
@@ -92,6 +92,12 @@ func demoHeap() {
 	heap.Print()
 }
 
+func demoMap() {
+	m := basicmap.MakeMap(4)
+
+	fmt.Println(m.Get("hello"))
+}
+
 func main() {
-	dfs.DFS(3, 10)
+	demoMap()
 }
