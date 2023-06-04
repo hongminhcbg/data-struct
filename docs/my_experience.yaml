@@ -40,10 +40,12 @@ partner_td:
     - lag, open success but get byIdNotfound, return error, partner refund but user still have when get list, close the TD, lost
     - SOL return req_id when get list
   P2:
-    - a lot of steps, when error in some step, stuck money
+    - a lot of steps, when error in some step, stuck money maybe stuck in current account, then user can login and withdraw to another bank
     - refactor pipeline
   P3:
     - forgot add timeout to request, some request take 18 hours response, partner timeout => retry, open 2 account same request_id
+batch_transaction:
+  - send 14k records to request, timeout, grpc retry, redislock + transaction commit late, duplicate record
 techdebt:
   - central proto
   - artifact registry google
