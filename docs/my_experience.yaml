@@ -35,3 +35,18 @@ noti:
   - expose api tracking noti
 sms:
   - send otp, round robin
+partner_td:
+  P1:
+    - lag, open success but get byIdNotfound, return error, partner refund but user still have when get list, close the TD, lost
+    - SOL return req_id when get list
+  P2:
+    - a lot of steps, when error in some step, stuck money
+    - refactor pipeline
+  P3:
+    - forgot add timeout to request, some request take 18 hours response, partner timeout => retry, open 2 account same request_id
+techdebt:
+  - central proto
+  - artifact registry google
+  - central swagger
+  - graphql
+   
