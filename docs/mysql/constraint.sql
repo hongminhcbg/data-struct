@@ -19,7 +19,7 @@ insert into room (id, name, capacity) values
 (2, 'Room 2', 2);
 
 
-#transacion 1
+--transacion 1
 START TRANSACTION;
 update rooms set cnt_in_use = cnt_in_use + 2 where id = 1;
 update rooms set cnt_in_use = cnt_in_use + 1 where id = 2;
@@ -28,7 +28,7 @@ insert into room_sessions (req_id, user_id, room_id, cnt) values
 ('req1', 101, 2, 1);
 COMMIT;
 
-#transacion 2
+--transacion 2
 START TRANSACTION;
 update rooms set cnt_in_use = cnt_in_use + 2 where id = 2;
 update rooms set cnt_in_use = cnt_in_use + 1 where id = 1;
@@ -37,5 +37,5 @@ insert into room_sessions (req_id, user_id, room_id, cnt) values
 ('req2', 102, 1, 1);
 COMMIT;
 
-# error [2024-05-26 22:09:15] [40001][1213] Deadlock found when trying to get lock; try restarting transaction
+-- error [2024-05-26 22:09:15] [40001][1213] Deadlock found when trying to get lock; try restarting transaction
 
