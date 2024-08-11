@@ -16,3 +16,27 @@ the_red_lock_algorithm:
 - get lock from each instace sequentially
 - if >= (N/2 + 1) client accquired => get lock success
 - more details here (https://redis.io/docs/reference/patterns/distributed-locks/)
+
+redis_use_case:
+  string: cache static config like banner
+  hset: active session, user-versions
+  zset: waiting room, FIFO, ZISMEMBER -> (if not found) -> ZADD -> (else) -> ZRANK (get my index) 
+
+key_eviction: (LRU or LFU)
+  - https://redis.io/docs/latest/develop/reference/eviction/
+
+key_space:
+  - https://redis.io/docs/latest/develop/use/keyspace/
+  - Very long keys are not a good idea. For instance a key of 1024 bytes is a bad idea not only memory-wise
+data type:
+  - hashset: 
+      ref: (https://redis.io/docs/latest/develop/data-types/hashes/)
+      content: Redis hashes are record types structured as collections of field-value pairs. You can use hashes to represent basic objects and to store groupings of counters, among other things.
+      use-case:
+          Active Session Tracking: "Store all active sessions in a hash key. Set each session's TTL to expire automatically after inactivity. Use HLEN to count active sessions."
+  - sets:
+      ref: https://redis.io/docs/latest/develop/data-types/sets/
+      content: Key only, not support key-val
+  - zset:
+      ref: https://redis.io/docs/latest/develop/data-types/sorted-sets/
+      conntent: leader board
