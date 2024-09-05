@@ -45,3 +45,8 @@ SOLID:
        func New(m Monitor) *LaptopDell {
           return &LaptopDell{Monitor: m}
         }
+Design Saving Gateway table, support
+- open account and close account
+- support idempotency key, retry request when open account
+- user get list active account
+- reconciliation per day, per month
