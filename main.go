@@ -3,9 +3,10 @@ package main
 import (
 	"data-struct/alv"
 	"data-struct/bst"
-	"data-struct/dfs"
 	"data-struct/heap"
+	"data-struct/mapv2"
 	"fmt"
+	"time"
 )
 
 func demoBst() {
@@ -43,22 +44,21 @@ func demoBst() {
 
 	bst.Delete(50)
 	bst.Print()
-
 }
 
 func demoAVL() {
 	node := alv.NewNode(50)
 	node.Insert(25)
 	node.Insert(10)
-	//node.Insert(75)
-	//node.Insert(85)
-	//node.Insert(12)
-	//node.Insert(19)
-	//node.Insert(6)
-	//node.Insert(3)
-	//node.Insert(64)
-	//node.Insert(86)
-	//node.Insert(15)
+	// node.Insert(75)
+	// node.Insert(85)
+	// node.Insert(12)
+	// node.Insert(19)
+	// node.Insert(6)
+	// node.Insert(3)
+	// node.Insert(64)
+	// node.Insert(86)
+	// node.Insert(15)
 
 	node.Print()
 }
@@ -92,6 +92,44 @@ func demoHeap() {
 	heap.Print()
 }
 
+func demomapv2() {
+	const MAX = 100
+	m := mapv2.NewMap()
+	newMap := make(map[int]int)
+	for i := 0; i < MAX; i++ {
+		newMap[i] = i % 7
+	}
+
+	m.Load(newMap)
+	fmt.Println(m.Get(3))
+
+	// make 2000 goroutines to read map
+	for i := 0; i < 2000; i++ {
+		go func() {
+			time.Sleep(time.Duration(i%MAX)*time.Millisecond + time.Duration(i/200)*time.Second)
+			fmt.Println("go routine: ", i, m.Get(i%MAX))
+		}()
+	}
+
+	// make internal 1s job set new data to map
+	ticker := time.NewTicker(1 * time.Second)
+	go func() {
+		for range ticker.C {
+			newMap := make(map[int]int)
+			for i := 0; i < MAX; i++ {
+				newMap[i] = i % 63
+			}
+
+			m.Load(newMap)
+			fmt.Println("Load new map success")
+		}
+	}()
+
+	// sleep 10s to see the result
+	time.Sleep(10 * time.Second)
+}
+
 func main() {
-	dfs.DFS(3, 10)
+	// dfs.DFS(3, 10)
+	demomapv2()
 }
