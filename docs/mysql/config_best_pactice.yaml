@@ -13,3 +13,6 @@ setMaxOpenConns:
 setMaxIdleConns:
 - by default sql.DB max idle conns is 2
 
+Merge index:
+https://dev.mysql.com/doc/refman/8.0/en/index-merge-optimization.html
+
