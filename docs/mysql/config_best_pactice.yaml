@@ -5,6 +5,13 @@ open_and_idle_connection:
 - when task is completed the connection is marked as idle 
 - when u need a connectin, sql.DB will first check if any idle connections ara already available in the pool 
 - if have no, Go will create new additional connection
+- MAX open connection benchmark
+  BenchmarkMaxOpenConns1-8                 500       3129633 ns/op         478 B/op         10 allocs/op
+  BenchmarkMaxOpenConns2-8                1000       2181641 ns/op         470 B/op         10 allocs/op
+  BenchmarkMaxOpenConns5-8                2000        859654 ns/op         493 B/op         10 allocs/op
+  BenchmarkMaxOpenConns10-8               2000        545394 ns/op         510 B/op         10 allocs/op
+  BenchmarkMaxOpenConnsUnlimited-8        2000        531030 ns/op         479 B/op          9 allocs/op
+
 
 setMaxOpenConns:
 - total in-use and idle connection
