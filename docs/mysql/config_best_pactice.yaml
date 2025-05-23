@@ -12,6 +12,7 @@ setMaxOpenConns:
 
 setMaxIdleConns:
 - by default sql.DB max idle conns is 2
+- Maximum number of idle (unused but open) connections to retain in the pool.
 
 Merge index:
 https://dev.mysql.com/doc/refman/8.0/en/index-merge-optimization.html
